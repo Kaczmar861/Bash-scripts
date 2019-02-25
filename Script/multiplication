@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Podaj liczby do mnozenia"
+echo "Podaj pierwsza liczbe:"
+read L1
+echo "Podaj druga liczbe:"
+read L2
+MN=$(($L1*$L2))
+echo "Wynik to :" $MN
+echo "Wynik mnozenia $L1 i $L2 to: " $MN >> dane.txt
+./skrypt
