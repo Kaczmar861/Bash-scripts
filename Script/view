@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ $1 –eq $2 ]; then
+	cat dane.txt;
+else
+	echo "Plik jeszcze nie istnieje wykonaj jakies dzialanie";
+fi
+./skrypt
