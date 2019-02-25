@@ -1,0 +1,67 @@
+@echo off
+echo --- MENU ---
+
+:return
+dir
+echo 1. Utworz katalog:
+echo 2. Dodaj plik:
+echo 3. Zmiana nazwy katalogu:
+echo 4. Usun katalog:
+echo 5. Przenies plik
+echo 6. Wyjdz
+
+set /p x=
+
+if %x%==1 goto wyr1
+if %x%==2 goto wyr2
+if %x%==3 goto wyr3
+if %x%==4 goto wyr4
+if %x%==5 goto wyr5
+if %x%==6 goto wyr6
+
+:wyr1
+echo Podaj nazwe katalogu:
+set /p x=
+mkdir %x%
+goto return
+
+:wyr2
+echo Podaj nazwe katalogu w ktorym mam stworzyc plik
+set /p x=
+echo >> %x%\plik.txt
+echo Utworzono plik "plik.txt"
+goto return
+
+:wyr3
+echo Zmiana nazwy katalogu
+echo Ktory katalog chce zmienic?
+set /p x=
+echo Podaj nowa nazwe
+set /p y=
+rename %x% %y%
+goto return
+
+:wyr4
+echo Usun katalog
+echo Ktory katalog usunac?
+set /p x=
+rmdir /s /q %x%
+goto return
+
+:wyr5
+echo Skopiuj plik.txt
+echo Nazwa katalogu z ktorego chcesz skopiowac plik
+set /p x=
+echo Nazwa pliku do skopiowania:
+set /p y=
+echo Nazwa katalogu docelowego:
+set /p z=
+copy %x%\%y% %z%
+goto return
+
+:wyr6
+goto koniec
+
+:koniec
+echo koniec
+pause
