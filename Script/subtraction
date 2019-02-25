@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Ile liczb chcesz odjac?:"
+read ilosc
+echo "Podaj pierwsza liczbe:"
+read ROZNICA;
+while(($ilosc>1))
+do
+	echo "Podaj kolejna  liczbe:"
+	read X;
+	ROZNICA=$((ROZNICA-X));
+	ilosc=$((ilosc-1));
+done
+
+echo "Wynik odemowania to $ROZNICA"
+echo "Wynik odejmowania  to: " $ROZNICA >> dane.txt
+./skrypt
