@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Podaj liczby do dzielenia"
+echo "Podaj pierwsza liczbe:"
+read L1
+echo "Podaj druga liczbe:"
+read L2
+DZ=$(($L1/$L2))
+echo "Wynik to :" $DZ
+echo "Wynik dzielenia $L1 i $L2 to: " $DZ >> dane.txt
+./skrypt
