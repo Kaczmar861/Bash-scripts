@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Wybierz dzialanie ktore chcesz wykonac: ";
+echo "1) Dodawanie";
+echo "2) Odejmowanie";
+echo "3) Mnozenie";
+echo "4) Dzielenie";
+echo "5) Wyswietlic plik z wynikami";
+echo "K) Koniec";
+
+read option;
+case $option in
+	1) ./dodawanie;;
+	2) ./odejmowanie;;
+	3) ./mnozenie;;
+	4) ./dzielenie;;
+	5) ./wyswietl;;
+	K) echo "Koniec";;
+	*) echo "Wybrales niepoprawna opcje";;
+esac
