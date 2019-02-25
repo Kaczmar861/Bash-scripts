@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Ile liczb chcesz dodac?:"
+read ilosc
+SUMA=0;
+while(($ilosc>0))
+do
+	echo "Podaj liczbe:"
+	read X;
+	SUMA=$((SUMA+X));
+	ilosc=$((ilosc-1));
+done
+echo "Suma wynosi $SUMA"
+
+echo "Wynik dodawania to: " $SUMA >> dane.txt
+./skrypt
